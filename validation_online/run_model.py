@@ -64,8 +64,8 @@ def loadPaperValidationData():
 
 def plotStyle():
     from matplotlib import rcParams
-    rcParams['font.family'] = 'sans-serif'
-    rcParams['font.sans-serif'] = ['Arial']
+    #rcParams['font.family'] = 'sans-serif'
+    #rcParams['font.sans-serif'] = ['Arial']
     rcParams['font.size'] = 18
     rcParams['axes.linewidth'] = 2
     rcParams['grid.linewidth'] = 2
