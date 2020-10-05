@@ -7,4 +7,4 @@ pandas==0.24.2
 seaborn==0.9.0
 jupyter==1.0.0
 ipywidgets==7.5.1
-voila==0.2.3
+voila
