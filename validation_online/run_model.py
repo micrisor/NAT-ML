@@ -2,7 +2,7 @@ from ipywidgets import interact
 
 def defineFeatures(whichFeat, her2=0):
     import pickle
-    fam = pickle.load(open('../inputs/transneo_analysis_featnames_extralimited_nochemo1.p', 'rb'))
+    fam = pickle.load(open('../inputs/featnames.p', 'rb'))
 
     if whichFeat == 'clinical':
         feats = fam['clin']
@@ -57,8 +57,8 @@ def defineResponse(df,criterion,her2=0):
 
 def loadPaperValidationData():
     import pandas as pd
-    test_file1 = pd.read_csv('../inputs/merged_her2neg_pcr_forvalidation_V3.csv')
-    test_file2 = pd.read_csv('../inputs/pbcp-her2pos_analysis_dataframe_forvalidation.csv')
+    test_file1 = pd.read_csv('../inputs/testing_her2neg_df.csv')
+    test_file2 = pd.read_csv('../inputs/testing_her2pos_df.csv')
     test_file = pd.concat([test_file1,test_file2], sort=False, ignore_index=True)
     return test_file
 

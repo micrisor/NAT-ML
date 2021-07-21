@@ -1,7 +1,7 @@
 def defineFeatures(whichFeat, her2=0):
     import pickle
     if her2==0:
-        fam = pickle.load(open('inputs/transneo_analysis_featnames_extralimited_nochemo1.p', 'rb'))
+        fam = pickle.load(open('inputs/featnames.p', 'rb'))
     else:
         raise Exception('Only HER2 agnostic allowed')
 
@@ -90,7 +90,7 @@ def main(whichFeats, her2_str, rcut, random_state):
 
 ## INPUT
     her2 = int(her2_str)
-    df_train = pd.read_csv('inputs/transneo_analysis_dataframe_extralimited_nochemo1.csv')
+    df_train = pd.read_csv('inputs/training_df.csv')
 
 ## DATASET
     feats = defineFeatures(whichFeats, her2=her2)

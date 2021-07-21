@@ -43,7 +43,7 @@ def getTrainingBands(train_path, rcut, model_her2_str, subset_her2_str, random_s
 def getData(model_her2_str, whichFeats, random_state):
     from run_models import defineTrainingSets, defineSplits, defineResponse
     model_her2 = int(model_her2_str)
-    df_train = pd.read_csv(inputs_path+'/transneo_analysis_dataframe_extralimited_nochemo1.csv')
+    df_train = pd.read_csv(inputs_path+'/training_df.csv')
 
     ## DATASET
     feats = defineFeatures(whichFeats, her2=model_her2)
@@ -57,7 +57,7 @@ def defineFeatures(whichFeat, her2=0):
     ### Need to re-define this function to include the longer path to the inputs file
     import pickle
     if her2==0:
-        fam = pickle.load(open(inputs_path+'/transneo_analysis_featnames_extralimited_nochemo1.p', 'rb'))
+        fam = pickle.load(open(inputs_path+'/featnames.p', 'rb'))
     else:
         raise Exception('You can only run HER2-agnostic models')
 
@@ -83,7 +83,7 @@ def defineFeatures(whichFeat, her2=0):
 def listLOO(her2):
     import pickle
     if her2==0:
-        fam = pickle.load(open(inputs_path+'/transneo_analysis_featnames_extralimited_nochemo1.p', 'rb'))
+        fam = pickle.load(open(inputs_path+'/featnames.p', 'rb'))
     else:
         raise Exception('You can only run HER2-agnostic models')
 
@@ -94,7 +94,7 @@ def listLOO(her2):
 def getLOO(her2, name):
     import pickle
     if her2==0:
-        fam = pickle.load(open(inputs_path+'/transneo_analysis_featnames_extralimited_nochemo1.p', 'rb'))
+        fam = pickle.load(open(inputs_path+'/featnames.p', 'rb'))
     else:
         raise Exception('You can only run HER2-agnostic models')
 

@@ -1,7 +1,7 @@
 def listLOO(her2):
     import pickle
     if her2==0:
-        fam = pickle.load(open('inputs/transneo_analysis_featnames_extralimited_nochemo1.p', 'rb'))
+        fam = pickle.load(open('inputs/featnames.p', 'rb'))
     else
         raise Exception('Only HER2 agnostic allowed')
 
@@ -12,7 +12,7 @@ def listLOO(her2):
 def getLOO(her2, name):
     import pickle
     if her2==0:
-        fam = pickle.load(open('inputs/transneo_analysis_featnames_extralimited_nochemo1.p', 'rb'))
+        fam = pickle.load(open('inputs/featnames.p', 'rb'))
     else
         raise Exception('Only HER2 agnostic allowed')
 

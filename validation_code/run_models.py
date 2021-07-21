@@ -1,6 +1,6 @@
 def defineFeatures(whichFeat, her2=0):
     import pickle
-    fam = pickle.load(open('../inputs/transneo_analysis_featnames_extralimited_nochemo1.p', 'rb'))
+    fam = pickle.load(open('../inputs/featnames.p', 'rb'))
 
     if whichFeat == 'clinical':
         feats = fam['clin']
@@ -91,9 +91,9 @@ def main(whichFeats, her2_str, random_seed):
 ## INPUT
     her2 = int(her2_str)
     if her2==-1:
-        df_test_pCR = pd.read_csv('../inputs/merged_her2neg_pcr_forvalidation_V3.csv')
+        df_test_pCR = pd.read_csv('../inputs/testing_her2neg_df.csv')
     elif her2==1:
-        df_test_pCR = pd.read_csv('../inputs/pbcp-her2pos_analysis_dataframe_forvalidation.csv')
+        df_test_pCR = pd.read_csv('../inputs/testing_her2pos_df.csv')
 
     ## Bev cut
     if her2==-1:
