@@ -22,6 +22,11 @@ Reproducing the results
 
 This repository also contains all the code necessary to reproduce the results in the paper. In particular: 
 
+- **validation_online** contains the code necessary to apply the integrated model on the validation dataset or any other dataset. 
+  
+  * Run *Predict from csv file.ipynb* to apply the model on a dataset stored in a csv file. By default, the notebook applies the models on the validation dataset.
+  * Run *Predict from single case.ipynb* to apply the model on a single case. This is the code-based equivalent to the Binder dashboard linked above.
+  
 * **training_code** contains the code necessary to train the models from scratch.
   
   * Run *schedule.py* to train all the standard models on an HPC cluster. 
@@ -31,9 +36,9 @@ This repository also contains all the code necessary to reproduce the results in
 
   - Note that leave-one-out models (only necessary for feature importance figures) are too large to be stored on GitHub so you will need to re-create them locally as explained above.
 
-* **validation_code** contains the code necessary to apply the trained models on the validation dataset. 
+* **validation_code** contains the code necessary to apply all the trained models on the validation dataset in batch mode. The outputs are generated as text files, so this is less user-friendly than the validation_online option.  
   
-  * Run *execute.py* to apply the models.
+  * Run *execute.py* to apply all the models on the validation dataset.
 
 - **graphs** contains Jupyter Notebooks that generate the panels in Figure 4 and Extended Figure 9.
 
