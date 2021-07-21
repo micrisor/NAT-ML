@@ -2,7 +2,7 @@ def defineFeatures(whichFeat, her2=0):
     import pickle
     if her2==0:
         fam = pickle.load(open('inputs/transneo_analysis_featnames_extralimited_nochemo1.p', 'rb'))
-    else
+    else:
         raise Exception('Only HER2 agnostic allowed')
 
     from leaveOneOutFeatures import getLOO

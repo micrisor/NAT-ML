@@ -133,6 +133,7 @@ def replaceValues(thedic):
     posneg_dic = {'Positive':1, 'Negative':-1}
     thedic['ER.status'] = posneg_dic[thedic['ER.status']]
     thedic['HER2.status'] = posneg_dic[thedic['HER2.status']]
+    thedic['LN.at.diagnosis'] = posneg_dic[thedic['LN.at.diagnosis']]
     # Others
     yn_dic = {'Yes':1, 'No':0}
     for ff in thedic:
